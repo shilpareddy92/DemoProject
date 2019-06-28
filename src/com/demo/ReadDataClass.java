@@ -14,7 +14,7 @@ public class ReadDataClass {
 		prop.load(inputstream);
 		System.out.println(prop.getProperty("name"));
 		System.out.println(prop.getProperty("age"));
-
+//\Users\SDagadapally\eclipse-workspace\DemoProject
 	}
 	
 
