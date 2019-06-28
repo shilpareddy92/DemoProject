@@ -16,5 +16,6 @@ public class ReadDataClass {
 		System.out.println(prop.getProperty("age"));
 
 	}
+	
 
 }
