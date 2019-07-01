@@ -45,7 +45,7 @@ public class JavaScriptActivities {
 				Alert a= driver.switchTo().alert();
 				a.accept();
 				Thread.sleep(10000);
-				
+				isPageLaoded();
 				scrollIntoView(groups, driver);
 				
 				
