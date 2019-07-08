@@ -33,5 +33,7 @@
 	<classpathentry kind="lib" path="D:/Selenium/Jars/commons-io-2.6/commons-io-2.6-sources.jar"/>
 	<classpathentry kind="lib" path="D:/Selenium/Jars/commons-io-2.6/commons-io-2.6-tests.jar"/>
 	<classpathentry kind="lib" path="D:/Selenium/Jars/commons-io-2.6/commons-io-2.6-test-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/Drivers/htmldriver/htmlunit-driver-2.35.1-jar-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/Jars/sikulixapi-1.1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

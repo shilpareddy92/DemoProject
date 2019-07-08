@@ -4,17 +4,21 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
-//////NOT SUITABLE FOR MOUSEMOVEMENT//////////////
-//////////HEADLESS AND GHOST DRIVER/////////////
-/////////VERT FAST////
-
-public class HeadLessBrowser {
+public class HeadLessChrome {
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Drivers\\chromedriver.exe");
 		
-		WebDriver driver = new HtmlUnitDriver();
+		ChromeOptions options= new ChromeOptions();
+		options.addArguments("window-size=1400,800");
+		options.addArguments("headless");
+		WebDriver driver = new ChromeDriver(options);
+		
+		
 		driver.get("https://www.facebook.com/");
 		System.out.println(driver.getCurrentUrl());
 		System.out.println(driver.getTitle());
@@ -26,11 +30,7 @@ public class HeadLessBrowser {
 		driver.findElement(By.name("email")).sendKeys("shilpa");
 		driver.findElement(By.name("pass")).sendKeys("reddy");
 		
-		System.out.println(driver.getCurrentUrl());
-		System.out.println(driver.getTitle());
-		
-	
-
+		System.out.println("done");
 	}
 
 }
