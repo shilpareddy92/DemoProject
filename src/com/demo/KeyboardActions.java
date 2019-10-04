@@ -39,6 +39,15 @@ public class KeyboardActions {
 		.sendKeys(Keys.ENTER)
 		.keyDown(username, Keys.SHIFT)
 		.sendKeys("name").keyUp(username, Keys.SHIFT).doubleClick().contextClick().build().perform();
+		System.out.println(username.getCssValue("font-size"));
+		username.sendKeys(Keys.CONTROL+"a"+Keys.DELETE);
+
+		System.out.println(username.getSize().getHeight());
+		System.out.println(username.getSize().getWidth());
+		
+		
+		System.out.println(username.getLocation().getX());
+		System.out.println(username.getLocation().getY());
 	}
 
 }

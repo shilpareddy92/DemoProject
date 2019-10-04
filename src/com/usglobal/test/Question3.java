@@ -1,24 +1,20 @@
-package com.demo;
+package com.usglobal.test;
 
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.interactions.Actions;
 
-public class WaitsAndNavigation {
-	
+public class Question3 {
+
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 
-		driver.get("https://www.facebook.com/");
+		driver.get("https://www.spicejet.com/");
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -33,20 +29,15 @@ public class WaitsAndNavigation {
 			System.out.println("page is not loaded completley");
 			
 		}
-		driver.navigate().to("https://mail.rediff.com/cgi-bin/login.cgi");
-		Set<String> windows= driver.getWindowHandles();
-		System.out.println("size " +windows.size());
-		driver.navigate().back();
-		driver.navigate().forward();
-		driver.navigate().back();
-		WebElement element=  driver.findElement(By.xpath("//span[text()=' Facebook © 2019']"));
 		
-		new WebDriverWait(driver, 1000)
-				.ignoring(StaleElementReferenceException.class)
-				.until(ExpectedConditions.visibilityOf(element));
+		Actions a= new Actions(driver);
 		
+		//1.move to element/////////
+		a.moveToElement(driver.findElement(By.xpath("//a[text()='Add-Ons']"))).build().perform();
 		
-		
+		driver.findElement(By.xpath("//a[text()='Indian Armed Forces Personnel']")).click();
+	
+
 	}
 
 }
